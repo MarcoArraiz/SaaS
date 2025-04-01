@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard de Usuario{% endblock %}
+
+{% block content %}
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Menu Section -->
+    <div class="col-span-2">
+        <h2 class="text-2xl font-bold mb-4">Menú</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="menu-items">
+            <!-- Menu items will be loaded here dynamically -->
+        </div>
+    </div>
+
+    <!-- Order Cart -->
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-xl font-bold mb-4">Tu Pedido</h2>
+        <div id="cart-items" class="space-y-4 mb-4">
+            <!-- Cart items will be added here -->
+        </div>
+        <div class="border-t pt-4">
+            <div class="flex justify-between mb-2">
+                <span class="font-semibold">Total:</span>
+                <span id="cart-total" class="font-bold">$0.00</span>
+            </div>
+            <button id="place-order" class="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">
+                Realizar Pedido
+            </button>
+        </div>
+    </div>
+
+    <!-- Orders History -->
+    <div class="col-span-1 md:col-span-2 lg:col-span-3">
+        <h2 class="text-2xl font-bold mb-4">Historial de Pedidos</h2>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <table class="min-w-full">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Fecha</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estado</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200" id="orders-history">
+                    <!-- Orders will be loaded here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// We'll add the JavaScript for handling orders and cart functionality later
+</script>
+{% endblock %}

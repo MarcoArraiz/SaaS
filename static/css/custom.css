@@ -1,0 +1,65 @@
+/* Custom animations */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom styles for order status */
+.status-pending {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-preparing {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.status-ready {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status-delivered {
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+.status-cancelled {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Custom card hover effects */
+.hover-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.hover-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Custom loading spinner */
+.loading {
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid #3498db;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
